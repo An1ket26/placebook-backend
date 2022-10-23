@@ -39,7 +39,7 @@ app.use((error,req,res,next)=>{
     res.json(error.message || 'something went wrong');
 });
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.x6e7vlw.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`).then(()=>{
-    app.listen(5000);
+    app.listen(process.env.PORT || 5000);
 }).catch((err)=>{
     console.log(err);
 });
