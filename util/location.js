@@ -1,6 +1,6 @@
 const axios = require("axios");
 const HttpError = require('../models/http-error');
-const API_KEY = "AIzaSyCc8B2-TYtLr7-ZpB_JhE1bWp-vsgXY4Kw";
+// API is here in API_KEY variable but not shown due to privacy problems
 
 const getCoordsforAddress = async (address) => {
   const response = await axios.get(
